@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480">
+    <title>JANSITE - автомобильный видеорегистратор</title>
+    <meta name="description" content="JANSITE - автомобильный видеорегистратор">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <!-- style -->
+    <link href="assets_pages/land/css/reset.css" rel="stylesheet">
+    <link href="assets_pages/land/fonts/Gilroy/Gilroy.css" rel="stylesheet">
+    <link href="assets_pages/land/js/slider/fancybox-3/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="JANSITE - автомобильный видеорегистратор">
+    <meta property="og:description" content="JANSITE - автомобильный видеорегистратор">
+    <script>
+        function dtime_nums(d) {
+            let now = new Date();
+            now.setDate(now.getDate() + d);
+            let mm = now.getMonth() + 1;
+            let day = now.getDate();
+            if (now.getDate() < 10) day = '0' + now.getDate();
+            if (mm < 10) mm = '0' + mm;
+            document.write(day + "." + mm + "." + now.getFullYear());
+        }
+    </script>
+
+<meta property="og:url" content=""/>
+</head>
+<body>
+    <!--wrap-->
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+            <img src="img/logo.png" alt="" class="header__logo">
+            <a href="#order_form" class="header__btn scroll">заказать в 1 клик ↓</a>
+        </header>
+        <!--/header-->
+        <!--top-menu-->
+        <div class="top-menu">
+            <ul class="top-menu__list">
+                <li class="top-menu__item">
+                    <a href="#video" class="top-menu__link scroll">Видеообзор</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#reviews" class="top-menu__link scroll">Отзывы</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#order-steps" class="top-menu__link scroll">Доставка</a>
+                </li>
+            </ul>
+        </div>
+        <!--/top-menu-->
+        <!--offer-v1-->
+        <div class="offer-v1">
+         <div class="offer-v1__title"><b>Автомобильный видеорегистратор</b> <br> JANSITE</div>
+         <div class="offer-v1__subtitle"><p>Ваш главный<br> помощник на дороге</p></div>
+         <!--bullet-->
+         <ul class="bullet">
+            <li class="bullet__item">
+                <div class="bullet__label">Циклическая запись</div>
+                <div class="bullet__text">Записывает видео<br>
+                 в циклах 3/5/10 минут
+             </div>
+         </li>
+         <li class="bullet__item">
+            <div class="bullet__label">Съемка день / ночь</div>
+            <div class="bullet__text">Режим full hd 60 к/с <br>
+                обзор 170°
+            </div>
+        </li>
+        <li class="bullet__item">
+            <div class="bullet__label">Режим парковки</div>
+            <div class="bullet__text">Автоматически <br>
+                включает запись
+            </div>
+        </li>
+        <li class="bullet__item">
+            <div class="bullet__label">G-sensor</div>
+            <div class="bullet__text">Защищает файлы <br>
+                от перезаписи при ДТП
+            </div>
+        </li>
+        <li class="bullet__item">
+            <div class="bullet__label">Антибликовое покрытие</div>
+            <div class="bullet__text">Защищает от <br>
+                бликов и света фар 
+            </div>
+        </li>
+        <li class="bullet__item">
+            <div class="tech">
+                <div class="tech__item">
+                    <img src="img/android.png" alt="">
+                    <p>Ночная<br>съемка</p>
+                </div>
+                <div class="tech__item">
+                    <img src="img/wifi.png" alt="">
+                    <p>Простая<br>Установка</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--/bullet-->
+</div>
+<!--/offer-v1-->
+<!--promo-->
+<div class="promo">
+    <h2 class="promo__title"><span>Супер</span> предложение!</h2>
+    <!--price-v1-->
+    <div class="price-v1">
+        <div class="price-v1__item">
+            <div class="price-v1__label price-v1__label--old">Старая цена:</div>
+            <div class="price-v1__value price-v1__value--old">
+                <span>4450</span><i>р</i>
+            </div>
+        </div>
+        <div class="price-v1__item">
+            <div class="price-v1__label price-v1__label--new">Цена сегодня:</div>
+            <div class="price-v1__value price-v1__value--new">
+                <span>1990</span><i>р</i></div>
+            </div>
+        </div>
+        <!--/price-v1-->
+        <!--order-form-->
+        <form class="main-order-form main-order-form order-form" method="post" action="send.php">
+            <input class="order-form__input placeholder" type="text" name="name" autocomplete="off"
+            placeholder="Ваше имя" required="">
+            <input class="order-form__input placeholder" type="tel" name="phone" autocomplete="off"
+            placeholder="Ваш телефон" required="">
+            <button class="button-m">Заказать со скидкой →</button>
+            <div class="date_sale">
+                Акция действует с
+                <script>dtime_nums(-7)</script>
+                по
+                <script>dtime_nums(+0)</script>
+                включительно
+            </div>
+            <div class="alert-warning">
+                <strong>Внимание!</strong>
+                <div class="timer">
+                    <p>Повышение цены через:
+                        <span class="hours"></span>
+                        <span class="sep">:</span>
+                        <span class="minutes"></span>
+                        <span class="sep">:</span>
+                        <span class="seconds"></span>
+                    </p>
+                </div>
+            </div>
+        <input type="hidden" name="l" value="15b90b91a540600532bbec5789ffe634aed165aa" />
+<input type="hidden" name="61175584cf172f74b94e41c3fac32d73e5521127" value="NmNjM2Y0NTY1OTZjM2U4MDEwMzA1YTAzZDkyODU0MDA4NjI=" />
+</form>
+        <!--/order-form-->
+    </div>
+    <!--/promo-->
+    <!--s1-->
+    <section class="s1">
+        <h2 class="title">С помощью <b>JANSITE</b> <span style="font-size: 30px;">вы забудете о скоростных нарушениях и спорных ситуациях на дороге</span>
+        </h2>
+        <div class="s1__text">
+            <p><b>JANSITE</b> представляет собой не просто авторегистратор с двумя видеокамерами, а <b>полноценный мультимедийный бортовой компьютер</b> с большим сенсорным дисплеем и сенсорным экраном.</p>
+            <p>Максимально <b>качественное изображение</b> поможет определить важные детали, такие как номерные знаки, действия водителей и дорожные знаки, которые помогут доказать вашу невиновность.</p>
+        </div>
+        <a href="#order_form" class="button-m scroll">Заказать со скидкой →</a>
+    </section>
+    <!--/s1-->
+    <section class="s11">
+        <!--benefit-->
+        <h2 class="title"><span>Качество без компромиссов</span></h2>
+        <div class="s1__text">
+            <p>
+                Хотите, чтобы у вас всегда был непредвзятый свидетель в спорных ситуациях на дороге? Отличным выбором станет JANSITE
+            </p>
+        </div>
+        <div class="benefit">
+            <!--item-->
+            <div class="benefit__item">
+                <div class="benefit__title"><p>Сьемка в формате FullHD</p></div>
+                <div class="benefit__desc">
+                    <p>Фронтальная камера Full HD 1080P записывает со скоростью 30 кадров в секунду, четко записывая номерные знаки и дорожные знаки во время вождения.</p>
+                    <img src="img/benefit-im1.gif" alt="" class="benefit__image">
+                </div>
+            </div>
+            <!--/item-->
+            <!--item-->
+            <div class="benefit__item">
+                <div class="benefit__title">Регулируемый угол обзора</div>
+                <div class="benefit__desc">
+                    <p>Вы можете настроить подходящий угол обзора, удерживая экран и перемещая палец вверх и вниз.</p>
+                    <img src="img/benefit-im2.gif" alt="" class="benefit__image">
+                </div>
+            </div>
+            <!--/item-->
+            <!--item-->
+            <div class="benefit__item">
+                <div class="benefit__title">Отличное ночное видение</div>
+                <div class="benefit__desc">
+                    <p>С помощью функции «Ночной режим» улучшите ночное видение в условиях плохой освещенности во время вождения, получайте кристально чистые и точные цвета видео и изображения в темную ночь.</p>
+                    <img src="img/benefit-im3.jpg" alt="" class="benefit__image">
+                </div>
+            </div>
+            <!--/item-->
+            <!--item-->
+            <div class="benefit__item">
+                <div class="benefit__title">3 режима работы</div>
+                <div class="benefit__desc">
+                    <p>Нежно проведите пальцем, чтобы переключить режим просмотра. Вы можете переключать представления, проводя пальцем влево или вправо. 3 вида отображения: вид спереди, вид сзади, вид спереди и сзади.
+                    </p>
+                    <img src="img/benefit-im4.gif" alt="" class="benefit__image">
+                </div>
+            </div>
+            <!--/item-->
+        </div>
+        <!--/benefit-->
+    </section>
+    <!--promo-v2-->
+    <div class="promo-v2">
+        <h2 class="promo-v2__title"><span>Акция</span> супер скидка!</h2>
+        <!--price-v2-->
+        <div class="price-v2">
+            <div class="price-v2__old"><span>4450</span><i>р</i></div>
+            <div class="price-v2__new">
+                <div class="price-v2__label">Цена<br> сегодня:</div>
+                <div class="price-v2__new-value"><span>1990</span><i>р</i></div>
+            </div>
+        </div>
+        <!--/price-v2-->
+        <a href="#order_form" class="button-m scroll">Заказать со скидкой →</a>
+        <div class="alert-warning">
+            <strong>Внимание!</strong>
+            <p>Количество товара по акции ограничено!</p>
+        </div>
+    </div>
+    <!--/promo-v2-->
+    <!--s2-->
+    <section class="s2">
+        <h2 class="title">Видеорегистратор <b>JANSITE</b><span>Больше преимуществ</span></h2>
+        <div class="benefit-v2">
+            <div class="benefit-v2__item">
+                <img src="img/benefit-v2-im1.jpg" alt="" class="benefit-v2__image">
+                <div class="benefit-v2__title">Сенсорный
+                    IPS-дисплей
+                    с диагональю 10''
+                </div>
+                <div class="benefit-v2__text"> Легко просматривайте окружение вашего автомобиля на 10-дюймовом экране высокой четкости.
+                    С помощью простого нажатия вы можете легко переключаться между камерами переднего и заднего вида.
+                </div>
+            </div>
+            <div class="benefit-v2__item">
+                <img src="img/benefit-v2-im2.jpg" alt="" class="benefit-v2__image">
+                <div class="benefit-v2__title">6-линзовый
+                    объектив с углом
+                    обзора 170°
+                </div>
+                <div class="benefit-v2__text">Стеклянный 6-линзовый объектив с инфракрасным напылением обладает углом
+                    обзора 170°. На записи фиксируется проезжая часть по всей ширине и прилегающие тротуары
+                </div>
+            </div>
+            <div class="benefit-v2__item">
+                <img src="img/benefit-v2-im3.gif" alt="" class="benefit-v2__image">
+                <div class="benefit-v2__title">Очень простая установка</div>
+                <div class="benefit-v2__text">Просто наденьте зеркало поверх своего старого. Вы сможете
+                    установить или снять видеорегистратор с зеркала всего в одно движение
+                </div>
+            </div>
+            <div class="benefit-v2__item">
+                <img src="img/benefit-v2-im4.jpg" alt="" class="benefit-v2__image">
+                <div class="benefit-v2__title">Источник питания –
+                    суперконденсатор
+                </div>
+                <div class="benefit-v2__text">Обладает долгим сроком службы. Кроме того, суперконденсатор более
+                    устойчив к перепадам температур в сравнении с Li-ion аккумуляторами
+                </div>
+            </div>
+        </div>
+        <a href="#order_form" class="button-m scroll">Заказать Jansite →</a>
+    </section>
+    <!--/s2-->
+    <!--char-->
+    <section class="char">
+        <h3 class="title">Технические<br> характеристики</h3>
+        <ul class="char__list">
+            <li class="char__item"><span>Дисплей:</span> 10 "IPS</li>
+            <li class="char__item"><span>Разрешение видеозаписи:</span> HD (1080x720)</li>
+            <li class="char__item"><span>Угол обзора:</span> 170°</li>
+            <li class="char__item"><span>Частота кадров:</span> 60 кадр/с; 30 кадр/с</li>
+            <li class="char__item"><span>Объектив:</span> 6 линз, ИК-покрытие</li>
+            <li class="char__item"><span>Датчик удара (G-сенсор):</span> да</li>
+            <li class="char__item"><span>Поддержка карты памяти:</span> microSD, до 128 ГБ</li>
+        </ul>
+    </section>
+    <!--/char-->
+    <!--photo-->
+    <section class="photo">
+        <h3 class="title">Комплектация</h3>
+        <img src="img/s3-im.jpg" alt="" class="photo__image photo__image--1">
+        <h3 class="title">Качество съемки</h3>
+        <img src="img/s3-im2.jpg" alt="" class="photo__image photo__image--2">
+        <a href="#order_form" class="button-m scroll">Заказать со скидкой →</a>
+    </section>
+    <!--/photo-->
+    <!--video-->
+    <div class="video" id="video">
+        <h2 class="title title--blue">JANSITE <span>видеообзор</span></h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ACL0oCtvQQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!--/video-->
+    <!--reviews-->
+    <div class="reviews" id="reviews">
+        <h2 class="title title--blue">Нас рекомендуют <span>Отзывы</span></h2>
+        <div class="reviews__list">
+            <!--item-->
+            <div class="reviews__item">
+                <div class="reviews__title">«Действительно оказался полезным приобретением»</div>
+                <img src="img/rev1.jpg" alt="" class="reviews__image">
+                <div class="reviews__text">Понравилось, что разработчики уделили много внимания видеочасти. От
+                    качественной оптики и хорошей матрицы до программной обработки видео. Плюс угол обзора 170 немалую
+                    роль играет. Итог - никаких гадостей в кадре нет (типа бликов), освещенность хорошая в любое время
+                    суток, советую к покупке.
+                </div>
+                <div class="reviews__author">
+                    <img src="img/ava1.jpg" alt="" class="reviews__avatar">
+                    <span>Владимир, г. Москва</span>
+                </div>
+            </div>
+            <!--/item-->
+            <!--item-->
+            <div class="reviews__item">
+                <div class="reviews__title">«Надежный регистратор
+                    в стильном дизайне»
+                </div>
+                <img src="img/rev2.jpg" alt="" class="reviews__image">
+                <div class="reviews__text">Очень красивое зеркало. Подключается легко. Вторую камеру поставил под стекло в багажнике,
+                    качество супер. В парковочной камере есть метки. Вечером все видно. На экране можно показать картинку сразу с 2-х камер. Спасибо.
+                </div>
+                <div class="reviews__author">
+                    <img src="img/ava2.jpg" alt="" class="reviews__avatar">
+                    <span>Михаил, г. Нижний Новгород</span>
+                </div>
+            </div>
+            <!--/item-->
+            <!--item-->
+            <div class="reviews__item">
+                <div class="reviews__title">«Доволен переходом на этот регистратор»</div>
+                <img src="img/rev3.jpg" alt="" class="reviews__image">
+                <div class="reviews__text">До этого был обычный регистратор и отдельно планшет. Позже кое-как воткнул еще и камеру через весь салон. 
+                    В прикуривателе зарядка телефона и FM трансмиттер... Рад, что все благополучно сменил Вашим зеркалом. Материал и оптика действительно хороши.
+                </div>
+                <div class="reviews__author">
+                    <img src="img/ava3.jpg" alt="" class="reviews__avatar">
+                    <span>Алексей, г. Москва</span>
+                </div>
+            </div>
+            <!--/item-->
+        </div>
+    </div>
+    <!--/reviews-->
+    <!--order-steps-->
+    <div class="order-steps" id="order-steps">
+        <h2 class="title title--white">JANSITE <span>как заказать</span> в 3 шага</h2>
+        <div class="order-steps__list">
+            <div class="order-steps__item">
+                <div class="order-steps__photo">
+                    <a href="#order_form" class="order-steps__btn scroll">Заказать →</a>
+                </div>
+                <div class="order-steps__text">Оставьте заявку<br> на нашем сайте</div>
+            </div>
+            <div class="order-steps__item">
+                <div class="order-steps__photo">
+                    <img src="img/order-steps-im1.jpg" alt="" class="order-steps__image">
+                </div>
+                <div class="order-steps__text">Вам перезвонит наш менеджер, ответит на все вопросы и оформит заказ</div>
+            </div>
+            <div class="order-steps__item">
+                <div class="order-steps__photo">
+                    <img src="img/order-steps-im2.png" alt="" class="order-steps__image">
+                </div>
+                <div class="order-steps__text">Доставим через 3-10 дней (в зависимости от региона) без предоплаты.
+                    Оплачиваете заказ при получении на почте
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/order-steps-->
+    <!--offer-v2-->
+    <div class="offer-v2">
+        <div class="offer-v2__logo">
+            <img src="img/logo2.png" alt="">
+        </div>
+        <div class="offer-v2__box">
+            <div class="offer-v2__title"><b>Автомобильный видеорегистратор</b> <br> JANSITE
+            </div>
+            <div class="offer-v2__subtitle"><p>Ваш главный<br> помощник на дороге</p></div>
+        </div>
+        <div class="offer-v2__order">
+            <!--price-v2-->
+            <div class="price-v2">
+                <div class="price-v2__old"><span>4450</span><i>р</i></div>
+                <div class="price-v2__new">
+                    <div class="price-v2__label">Цена<br> сегодня:</div>
+                    <div class="price-v2__new-value"><span>1990</span><i>р</i></div>
+                </div>
+            </div>
+            <!--/price-v2-->
+            <!--order-form-->
+            <form class="main-order-form main-order-form order-form" id="order_form" method="post" action="send.php">
+                <div class="order-form__head">
+                    <div class="order-form__title">Для заказа со скидкой<br> оставьте заявку</div>
+                    <div class="order-form__text">
+                        <p>Наш оператор свяжется с вами в ближайшее время для уточнения деталей заказа</p>
+                        <p class="white-color">Звонок бесплатный!</p>
+                    </div>
+                </div>
+                <input class="order-form__input placeholder" type="text" name="name"
+                placeholder="Ваше имя" required="">
+                <input class="order-form__input placeholder" type="tel" name="phone"
+                placeholder="Ваш телефон" required="">
+                <button class="button-m">Заказать со скидкой →</button>
+                <div class="date_sale">
+                    Акция действует с
+                    <script>dtime_nums(-7)</script>
+                    по
+                    <script>dtime_nums(+0)</script>
+                    включительно
+                </div>
+                <div class="alert-warning">
+                    <strong>Внимание!</strong>
+                    <div class="timer">
+                        <p>Повышение цены через:
+                            <span class="hours"></span>
+                            <span class="sep">:</span>
+                            <span class="minutes"></span>
+                            <span class="sep">:</span>
+                            <span class="seconds"></span>
+                        </p>
+                    </div>
+                </div>
+            <input type="hidden" name="l" value="15b90b91a540600532bbec5789ffe634aed165aa" />
+<input type="hidden" name="61175584cf172f74b94e41c3fac32d73e5521127" value="NmNjM2Y0NTY1OTZjM2U4MDEwMzA1YTAzZDkyODU0MDA4NjI=" />
+</form>
+            <!--/order-form-->
+        </div>
+        <footer class="footer_section">
+            <p>
+                ООО "Эйкон" ОГРН 1197746061765;
+                ИНН 9717075800, 119048, город Москва
+                3-Я Фрунзенская ул, д. 19, офис 18
+            </p>
+            <p>8 (495) 875-125-87</p>
+            <p>email: ostrov.prodazh@gmail.com</p>
+                    <a href="politics.html">Политика конфиденциальности</a>
+                    <a href="agreement.html">Пользовательское соглашение</a>
+            <a href="#returns" data-fancybox>Условия возврата товара</a>
+        </footer>
+    </div>
+    <!--/offer-v2-->
+</div>
+<!--/wrap-->
+
+<script type="text/javascript" src="assets_pages/js/lib.js?v=0.0.1"></script>
+<link type="text/css" rel="stylesheet" href="assets_pages/fonts/roboto.css">
+<script type="text/javascript" src="assets_pages/js/yasoblock-v2.js?v=1"></script>
+<script type="text/javascript" src="assets_pages/js/plugins.js"></script>
+
+    <script type="text/javascript">
+        var phonePrefix = '+7';
+    </script>
+    <script type="text/javascript" src="assets_pages/js/phonePrefix.js?v=3"></script>
+
+
+
+<script>
+    var comebackerFormId = '4';
+</script>
+
+<link href="assets_pages/css/popup-m1-style.css?v=0.0.3" rel="stylesheet" type="text/css"/>
+<script src="assets_pages/js/popup-m1.js?v=0.0.1" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- popup-m1-politicians-container -->
+
+
+
+<script src="assets_pages/land/js/slider/fancybox-3/jquery.fancybox.min.js"></script>
+<script src="assets_pages/land/js/youtube/previewYouTube.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>
